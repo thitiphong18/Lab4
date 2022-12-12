@@ -1,0 +1,27 @@
+<template>
+  <v-app :theme="theme">
+    <v-app-bar>
+      <v-spacer></v-spacer>
+
+      <v-btn
+        :prepend-icon="theme === 'light' ? mdiWeatherSunny : mdiWeatherNight"
+        @click="onClick"
+        >Toggle Theme</v-btn
+      >
+    </v-app-bar>
+
+    <v-main>
+      <v-container>Content area</v-container>
+    </v-main>
+  </v-app>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import { mdiWeatherSunny, mdiWeatherNight } from "@mdi/js";
+const theme = ref("light");
+
+function onClick() {
+  theme.value = theme.value === "light" ? "dark" : "light";
+}
+</script>
