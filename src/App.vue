@@ -22,32 +22,26 @@
 
       <v-list density="compact" nav>
         <v-list-item
-          prepend-icon="mdi-folder"
+          :prepend-icon="mdiFolder"
           title="My Files"
           value="myfiles"
+          to="/my-files-view"
         ></v-list-item>
         <v-list-item
-          prepend-icon="mdi-account-multiple"
+          :prepend-icon="mdiAccountMultiple"
           title="Shared with me"
           value="shared"
+          to="/share-with-me"
         ></v-list-item>
         <v-list-item
-          prepend-icon="mdi-star"
+          :prepend-icon="mdiStar"
           title="Starred"
           value="starred"
         ></v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-main>
-      <v-container>
-        <v-icon :icon="mdiVuetify"></v-icon>
-        <v-icon :icon="mdiCursorPointer"></v-icon>
-        <v-btn class="ma-2" color="primary">
-          Accept
-          <v-icon end :icon="mdiCheckboxMarkedCircle"></v-icon>
-        </v-btn>
-        Content area</v-container
-      >
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
@@ -55,6 +49,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import {
+  mdiStar,
+  mdiAccountMultiple,
+  mdiFolder,
   mdiWeatherSunny,
   mdiWeatherNight,
   mdiCursorPointer,
