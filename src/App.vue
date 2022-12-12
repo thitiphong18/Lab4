@@ -9,7 +9,7 @@
         >Toggle Theme</v-btn
       >
     </v-app-bar>
-    <v-navigation-drawer expand-on-hover rail>
+    <v-navigation-drawer expand-on-hover rail permanent>
       <v-list>
         <v-list-item
           prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
@@ -37,6 +37,7 @@
           :prepend-icon="mdiStar"
           title="Starred"
           value="starred"
+          to="/starred"
         ></v-list-item>
       </v-list>
     </v-navigation-drawer>
