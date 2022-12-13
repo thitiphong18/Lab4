@@ -13,9 +13,11 @@ import { mdiHeartOutline, mdiCursorDefaultClickOutline } from "@mdi/js";
         </FancyButton>
       </v-col>
       <v-col
-        ><FancyButton
-          ><v-icon :icon="mdiCursorDefaultClickOutline" /> Click Me
-          <template #tail> My Tail </template>
+        ><FancyButton>
+          <template #tail>
+            <v-icon :icon="mdiCursorDefaultClickOutline" />
+          </template>
+          Click Me
         </FancyButton>
       </v-col>
     </v-row>

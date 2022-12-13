@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>ShareWithMe</div>
+  <div>My Profile</div>
 </template>
