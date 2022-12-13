@@ -23,11 +23,7 @@ const frameList = [
   <v-container>
     <v-row>
       <v-col v-for="(item, index) of frameList" :key="index">
-        <FrameworkPop
-          :name="item.name"
-          :img="item.img"
-          :rating="item.rating"
-        ></FrameworkPop>
+        <FrameworkPop :name="item.name" :img="item.img"></FrameworkPop>
       </v-col>
     </v-row>
   </v-container>

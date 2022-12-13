@@ -1,24 +1,30 @@
 <script setup lang="ts">
 import { ref } from "vue";
-//const props = defineProps<{
-//name: string;
-//img: string;
-//rating: number;
-//}>();
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  img: {
-    type: String,
-    required: true,
-  },
-  rating: {
-    type: Number,
-    required: true,
-  },
-});
+const props = withDefaults(
+  defineProps<{
+    name: string;
+    img: string;
+    rating: number;
+  }>(),
+  {
+    rating: 10,
+  }
+);
+//const props = defineProps({
+//name: {
+//type: String,
+//required: true,
+//},
+//img: {
+//type: String,
+//required: true,
+//},
+//rating: {
+// type: Number,
+//required: true,
+//dafault: 10,
+//},
+//});
 const count = ref(props.rating);
 function inc() {
   count.value++;
