@@ -6,13 +6,11 @@ import FrameworkPop from "@/components/FrameworkPop.vue";
   <v-container>
     <v-row>
       <v-col>
-        <FrameworkPop></FrameworkPop>
-      </v-col>
-      <v-col>
-        <FrameworkPop></FrameworkPop>
-      </v-col>
-      <v-col>
-        <FrameworkPop></FrameworkPop>
+        <FrameworkPop
+          name="VueJS"
+          img="https://img.icons8.com/color/512/vue-js.png"
+          :rating="10"
+        ></FrameworkPop>
       </v-col>
     </v-row>
   </v-container>

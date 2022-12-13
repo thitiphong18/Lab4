@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
-const count = ref(100);
+const props = defineProps<{
+  name: string;
+  img: string;
+  rating: number;
+}>();
+const count = ref(props.rating);
 function inc() {
   count.value++;
 }
@@ -10,13 +15,10 @@ function dec() {
 </script>
 <template>
   <v-card class="mx-auto" max-width="344" variant="outlined">
-    <v-img
-      src="https://img.icons8.com/color/512/vue-js.png"
-      height="200px"
-    ></v-img>
+    <v-img :src="props.img" height="200px"></v-img>
     <v-card-item>
       <div class="text-center">
-        <div class="text-h6 mb-1">Vue Js</div>
+        <div class="text-h6 mb-1">{{ props.name }}</div>
         <div class="text-caption">Score : {{ count }}</div>
       </div>
     </v-card-item>
