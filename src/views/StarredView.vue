@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import FrameworkPop from "@/components/FrameworkPop.vue";
-const frameList = [
+import { ref } from "vue";
+const frameList = ref([
   {
     name: "VueJS",
     img: "https://img.icons8.com/color/512/vue-js.png",
@@ -16,9 +17,10 @@ const frameList = [
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
     rating: 14,
   },
-];
+]);
 function changeRating(index: number, rating: number) {
   console.log("action" + index + " :" + rating);
+  frameList.value[index].rating = rating;
 }
 </script>
 
@@ -35,8 +37,8 @@ function changeRating(index: number, rating: number) {
         ></FrameworkPop>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col>
+    <v-row justify="center">
+      <v-col cols="6">
         <v-table>
           <thead>
             <tr>
@@ -49,6 +51,7 @@ function changeRating(index: number, rating: number) {
             <tr v-for="(item, index) of frameList" :key="index">
               <td>{{ index + 1 }}</td>
               <td>{{ item.name }}</td>
+              <td>{{ item.rating }}</td>
             </tr>
           </tbody>
         </v-table>
