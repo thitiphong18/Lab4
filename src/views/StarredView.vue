@@ -35,5 +35,24 @@ function changeRating(index: number, rating: number) {
         ></FrameworkPop>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col>
+        <v-table>
+          <thead>
+            <tr>
+              <th>order</th>
+              <th>name</th>
+              <th>rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) of frameList" :key="index">
+              <td>{{ index + 1 }}</td>
+              <td>{{ item.name }}</td>
+            </tr>
+          </tbody>
+        </v-table>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
