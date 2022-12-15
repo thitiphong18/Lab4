@@ -1,12 +1,26 @@
 <script setup lang="ts"></script>
 <script>
 export default {
-  data: () => ({
-    colors: ["green", "purple", "orange", "indigo", "red"],
-    rating: 4.5,
-  }),
+  data() {
+    return {
+      interval: {},
+      value: 0,
+    };
+  },
+  beforeUnmount() {
+    clearInterval(this.interval);
+  },
+  mounted() {
+    this.interval = setInterval(() => {
+      if (this.value === 100) {
+        return (this.value = 0);
+      }
+      this.value += 10;
+    }, 1000);
+  },
 };
 </script>
+
 <template>
   <v-container>
     <v-row>
@@ -115,4 +129,63 @@ export default {
       </v-col>
     </v-row>
   </v-container>
+  <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+    <div
+      class="d-flex flex-column fill-height justify-center align-center text-white"
+    >
+      <h class="text-h4 font-weight-thin mb-4">สิ่งที่สนใจ</h>
+      <h4 class="subheading">เกมคอมพิวเตอร์</h4>
+      <h4 class="subheading">อ่านการ์ตูน</h4>
+      <h4 class="subheading">ฟังเพลง</h4>
+      <h4 class="subheading">อ่านหนังสือ</h4>
+    </div>
+  </v-parallax>
+
+  <div class="text-center">
+    <v-progress-circular
+      :rotate="360"
+      :size="100"
+      :width="15"
+      :model-value="value"
+      color="teal"
+    >
+      {{ value }}
+    </v-progress-circular>
+
+    <v-progress-circular
+      :rotate="-90"
+      :size="100"
+      :width="15"
+      :model-value="value"
+      color="primary"
+    >
+      {{ value }}
+    </v-progress-circular>
+
+    <v-progress-circular
+      :rotate="90"
+      :size="100"
+      :width="15"
+      :model-value="value"
+      color="red"
+    >
+      {{ value }}
+    </v-progress-circular>
+
+    <v-progress-circular
+      :rotate="180"
+      :size="100"
+      :width="15"
+      :model-value="value"
+      color="pink"
+    >
+      {{ value }}
+    </v-progress-circular>
+  </div>
 </template>
+
+<style>
+.v-progress-circular {
+  margin: 1rem;
+}
+</style>
