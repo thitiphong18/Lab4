@@ -43,12 +43,6 @@ export default {
                     สวัสดีครับ ผมนาย ฐิติพงศ์ นิ่มมาก ชื่อเล่น คิว เกิดวันที่ 17
                     กรกฎาคม พ.ศ.2545 เกิดที่ กรุงเทพมหานคร สิ่งที่ชอบ เธอ
                   </v-card-text>
-
-                  <template v-slot:actions>
-                    <v-btn color="primary" variant="text">View More</v-btn>
-
-                    <v-btn color="primary" variant="text">See in Map</v-btn>
-                  </template>
                 </v-card>
 
                 <v-card
@@ -60,18 +54,15 @@ export default {
                   variant="text"
                 >
                   <v-img
-                    src="https://www.matichon.co.th/wp-content/uploads/2017/06/93-1-728x450.jpg"
+                    src="https://3.bp.blogspot.com/-TaaXpdtoZn4/XGoS6IlEslI/AAAAAAAAFt8/nVeUdicR3XEZABmEDu18vQq6eAgI1HU6QCLcBGAs/s640/IMG_20190130_071240.jpg"
                     height="800"
                     cover
                   ></v-img>
 
                   <v-card-text>
-                    <h2>ประวัติการศึกษา</h2>
-
+                    <h2>ประวัติการศึกษาชั้นประธมศึกษา</h2>
                     ชั้นประธมศึกษา ศึกษาที่โรงเรียน อนุบาลวัดคลองใหญ่ ตำบล
-                    คลองใหญ่ อำเภอ คลองใหญ่ จังหวัด ตราด
-                    ชั้นมัธยยมศึกษาทั้งตอนต้นและต้อนปลาย ศึกษาที่โรงเรียน
-                    ตราษตระการคุณ ตำบล วังกระแจะ อำเภอ เมือง จังหวัด ตราด
+                    คลองใหญ่ อำเภอ คลองใหญ่ จังหวัด ตราด ก่อตั้ง ปี 2466
                   </v-card-text>
                 </v-card>
 
@@ -90,12 +81,26 @@ export default {
                   ></v-img>
 
                   <v-card-text>
-                    <h2>ประวัติการศึกษา</h2>
-
-                    ชั้นประธมศึกษา ศึกษาที่โรงเรียน อนุบาลวัดคลองใหญ่ ตำบล
-                    คลองใหญ่ อำเภอ คลองใหญ่ จังหวัด ตราด
+                    <h2>ประวัติการศึกษาชั้นมัธยมศึกษา</h2>
                     ชั้นมัธยยมศึกษาทั้งตอนต้นและต้อนปลาย ศึกษาที่โรงเรียน
                     ตราษตระการคุณ ตำบล วังกระแจะ อำเภอ เมือง จังหวัด ตราด
+                    ก่อตั้ง 14 มกราคม พ.ศ. 2442
+                  </v-card-text>
+                </v-card>
+                <v-card
+                  border
+                  density="comfortable"
+                  prepend-avatar="https://scontent.fbkk2-4.fna.fbcdn.net/v/t39.30808-6/314609315_10225456965549690_5287212767421642758_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEU6zZYocwmxoP-nxC5Sh1EJaIkumxu-xIloiS6bG77EtkrneAOFqD7Dh6xbXRc1XY&_nc_ohc=g5MaLRt3dp0AX9dtnpB&_nc_zt=23&_nc_ht=scontent.fbkk2-4.fna&oh=00_AfAdl-RgnNuunV6u4l01MiTbzhm7pnF7ghC1etzbhaQCUA&oe=639F8587"
+                  subtitle="ฐิติพงศ์ นิ่มมาก"
+                  title="คิวเอง"
+                  variant="text"
+                >
+                  <v-img src="" height="800" cover></v-img>
+
+                  <v-card-text>
+                    <h2>ประวัติการศึกษาชั้นประธมศึกษา</h2>
+                    ชั้นประธมศึกษา ศึกษาที่โรงเรียน อนุบาลวัดคลองใหญ่ ตำบล
+                    คลองใหญ่ อำเภอ คลองใหญ่ จังหวัด ตราด ก่อตั้ง ปี 2466
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -103,10 +108,6 @@ export default {
           </v-layout>
         </v-card>
       </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col> </v-col>
     </v-row>
   </v-container>
 </template>
